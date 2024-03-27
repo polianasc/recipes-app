@@ -1,36 +1,48 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import { useEffect, useState } from 'react'
+import { Routes, Route } from 'react-router-dom'
 import './App.css'
+// import 'bootstrap'
+import Navbar from './components/Navbar'
+import SearchButton from './components/SearchButton'
+import MineRecipesButton from './components/MineRecipesButton'
+import FavoritesButton from './components/FavoritesButton'
+
+
+
 
 function App() {
-  const [count, setCount] = useState(0)
+  // const {recipes, fetchRecipes} = useContext(UserContext)
+ 
+  //   async function getRecipes(value){
+  //     const response = await fetch ((`https://api.edamam.com/search?q=${value}&app_id=${ID}&app_key=${KEY}`))
+  //     const data = await response.json()
+  //     console.log(data)
+  //     setRecipes(data)
+
+  //   }
+  //   getRecipes()
+  // }, []);
+    
 
   return (
     <>
-      {/* <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p> */}
-      <h1>Hello World</h1>
+  <div className='container'>
+   <h1 className='text-center my-4'>Recipe App</h1>
+    <Routes>
+      <Route path ="/" element={<Navbar/>}>
+        {/* <Route index element={<Navbar />}/> */}
+        <Route path="/search" element={<SearchButton/>} />
+        <Route path="/mine-recipes" element={<MineRecipesButton/>} />
+        <Route path="/favorites" element={<FavoritesButton/>} />
+      </Route>
+    </Routes>
+  </div> 
     </>
   )
 }
 
 export default App
+
+
+
+
