@@ -1,16 +1,19 @@
 import React from "react";
 import SearchBar from './SearchBar'
-import RecipeList from './SearchRecipeList'
+import SearchRecipeList from './SearchRecipeList'
 
-
+ // FLAVOR PROFILE
+ 
 function SearchButton() {
 
   return (
   <>
        <SearchBar  />
-       <RecipeList />
+       <SearchRecipeList />
   </>
   );
 }
 
 export default SearchButton;
+
+

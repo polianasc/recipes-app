@@ -1,9 +1,9 @@
 import React from "react";
 import { useState, createContext } from "react";
 
-export const UserContext = createContext()
+export const ApiRecipesContext = createContext()
 
-function UserProvider({children}) {
+function ApiRecipesProvider({children}) {
     const [recipes, setRecipes] = useState([])
 
   const ID ='e17e7786'
@@ -17,9 +17,11 @@ function UserProvider({children}) {
   };
     
   return (
-  <UserContext.Provider value={{recipes, setRecipes, fetchRecipes}}>
+  <ApiRecipesContext.Provider value={{recipes, setRecipes, fetchRecipes}}>
     {children}
- </UserContext.Provider>);
+ </ApiRecipesContext.Provider>);
 }
 
-export default UserProvider;
+export default ApiRecipesProvider;
+
+// https://api.edamam.com/search?q=${searchValue}&app_id=e17e7786&app_key=7599a31de58296b2b18cad3b4252cd4c'

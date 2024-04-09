@@ -1,15 +1,15 @@
 import React from "react";
 import SearchRecipeItem from './SearchRecipeItem'
-import { UserContext } from "../contexts/UserContext";
+import { ApiRecipesContext } from "../contexts/ApiRecipesContext";
 import { useContext } from "react";
 
 function SearchRecipeList() {
-    const {recipes} = useContext(UserContext)
+    const {recipes} = useContext(ApiRecipesContext)
 
     
   return (
     <>
-    <div>
+    <div className="container-list">
         {recipes.map((recipe, index) => (
             <div>
                 <SearchRecipeItem key={index} recipe={recipe} />

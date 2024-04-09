@@ -4,28 +4,22 @@ import {Outlet, NavLink} from 'react-router-dom'
 function Navbar() {
   return (
   <>
-  <ul>
-    
-    <li>
-      <NavLink to="/search">get inspired</NavLink>
-    </li>
-    <li>
-      <NavLink to="/mine-recipes">mine recipes</NavLink>
-    </li>
-    <li>
-      <NavLink to="/favorites">favorites</NavLink>
-    </li>
-  </ul>
+  <div className="navbar-container">
+    <div className="navbar-logo-container">
+      <div> <NavLink className="logo" to="/home"> 💚 FlavorMatch 💚 </NavLink> </div>
+    </div>
+    <div className="navbar-links-container">
+      <div className="green-btn"> <NavLink to="/search">Flavor Profiles</NavLink> </div>
+      <div className="green-btn"> <NavLink to="/mine-recipes"> Recipe Diary </NavLink>  </div>
+    </div>
+  </div>
+
   <main>
     <Outlet /> 
   </main>
-
-  </>);
+  </>
+  );
 }
 
 export default Navbar;
 
-// Navbar
-// |SEARCH for recipe in the library|
-// |SAVE mine recipe|
-// |FAVORITES from both|

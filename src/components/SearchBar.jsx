@@ -1,11 +1,11 @@
 import React from "react";
 import { useState } from "react";
-import { UserContext } from "../contexts/UserContext";
+import { ApiRecipesContext } from "../contexts/ApiRecipesContext";
 import { useContext } from "react";
 
 
 function SearchBar() {
-    const {fetchRecipes} = useContext(UserContext)
+    const {fetchRecipes} = useContext(ApiRecipesContext)
     const [searchValue, setSearchValue] = useState('')
 
     function handleSubmit(e) {
@@ -13,18 +13,24 @@ function SearchBar() {
         fetchRecipes(searchValue)
     }
 
+     function handleChange(e){
+      setSearchValue(e.target.value)
+     }
+
 
   return (
     <>
-    <form onSubmit={handleSubmit}>
+    <div className="search-bar-container">
+    <h2>... searching for a match? 😏</h2>
+    <form className="search-bar" onSubmit={handleSubmit}>
+    
+        <input type="text" placeholder="type the ingredient..." value={searchValue} 
+        onChange={handleChange} />
         <div>
-        <input type="text" placeholder="search for recipes in the ..." value={searchValue} 
-        onChange={(e) => setSearchValue(e.target.value)} />
-        <div>
-        <button>Search</button>
-        </div>
+        <button className="green-btn">🔍</button>
         </div>
     </form>
+    </div>
     </>
   );
 }
