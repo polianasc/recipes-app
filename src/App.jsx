@@ -46,8 +46,8 @@ function App() {
         <Routes>
           <Route path ="/" element={<Navbar />}>
             <Route path="/home" element={<Home/>} />
-            <Route path="/search" element={<SearchButton/>} />
-            <Route path="/mine-recipes" element={<MineRecipesButton/>} />
+            <Route path="/flavor-profile" element={<SearchButton/>} />
+            <Route path="/recipe-diary" element={<MineRecipesButton/>} />
           </Route>
         </Routes> 
       // </div> 

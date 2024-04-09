@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import SaveForm from "./SaveForm";
 import MineRecipesDisplay from "./MineRecipesDisplay";
 
+//RECIPE DIARY
 
 function SaveButton() {
 
@@ -27,10 +28,11 @@ function SaveButton() {
 
   return (
   <>
+  <div className="save-buttons-container">
     <h2>your recipes are save here 🔒 </h2>
     <div className="button-save">
-      <button className="green-btn" onClick = {() => setShowList(true)}> My Colection </button>
-      <button className="green-btn" onClick = {() => setShowForm(true)}> Save New Recipe </button>
+      <button className="gray-btn" onClick = {() => setShowList(true)}> My Colection </button>
+      <button className="gray-btn" onClick = {() => setShowForm(true)}> Save New Recipe </button>
     </div>
     { showForm && <SaveForm onSave={handleSave} />}
 
@@ -43,6 +45,7 @@ function SaveButton() {
       )}
   </>
     )}
+     </div>
     </>
   );
 }

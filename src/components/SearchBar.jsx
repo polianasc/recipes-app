@@ -2,7 +2,8 @@ import React from "react";
 import { useState } from "react";
 import { ApiRecipesContext } from "../contexts/ApiRecipesContext";
 import { useContext } from "react";
-
+ 
+//FLAVOR PROFILE
 
 function SearchBar() {
     const {fetchRecipes} = useContext(ApiRecipesContext)
@@ -27,7 +28,7 @@ function SearchBar() {
         <input type="text" placeholder="type the ingredient..." value={searchValue} 
         onChange={handleChange} />
         <div>
-        <button className="green-btn">🔍</button>
+        <button className="gray-btn">🔍</button>
         </div>
     </form>
     </div>

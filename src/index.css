@@ -72,7 +72,6 @@ button:focus-visible {
 
 .green-btn {
   background-color: rgb(93, 209, 64);
-  color: green;
   margin: 0 auto;
   padding: 10px 20px;
   max-width: 150px;  
@@ -82,10 +81,30 @@ button:focus-visible {
   color: white;
 }
 
+.gray-btn {
+  background-color: hsl(0, 0%, 90%);
+  margin: 0 auto;
+  padding: 10px 20px;
+  max-width: 150px;  
+  gap: 10px;
+  border-radius: 10px;
+  font-weight: 500;
+  color: #213446;
+}
+
+.delete-btn {
+  align-self: end;
+  background-color: #5DD140;
+  border-radius: 15px;
+  background: linear-gradient(to top, #76D75E 0%, #5DD140 100%);
+
+ 
+}
+
 input {
   margin-bottom: 5px;
   height: 30px;
-  border: 1px solid lightcoral;
+  border: 1px solid green;
   border-radius: 10px ;
   padding-left: 5px;
 
@@ -94,11 +113,31 @@ input {
  textarea {
   margin-bottom: 5px;
   height: 100px;
-  border: 1px solid lightcoral;
+  border: 1px solid green;
   border-radius: 10px ;
 
 }
 
+
+/* DISPLAY CONTAINER AND ITEM */
+
+.container-list {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.labels-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 5px;
+  color: black;
+  /* font-size: 12px; */
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
 
 /* =========styling individual======== */
 
@@ -153,7 +192,7 @@ input {
 /* FLAVOR PROFILES (API-CALL) */
 /* searchbar */
 .search-bar-container {
-  max-width: 600px;
+  margin-top: 100px;
 }
 .search-bar{
   display: flex;
@@ -171,22 +210,37 @@ input {
 
 
 /* RECIPE DIARY (SAVE RECIPE)*/
+
+/* BUTTONS */
+.save-buttons-container{
+  margin-top: 100px;
+}
+.button-save {
+  margin-bottom: 20px;
+}
+
+/* FORM */
 .form-mine-recipes {
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
-  /* align-items: center; */
-  background-color: lightgoldenrodyellow;
+  flex-wrap: wrap;
+  background-color: #F9F9F9;
   border-radius: 10px;
   padding: 20px;
   text-align: start;
-  color: lightcoral;
+  color: #213446;
 }
-.form-mine-recipes button {
-  max-width: 150px;  ;
-  align-self: center;
-  border: 1px solid lightcoral;
-  border-radius: 10px ;
+
+.form-labels-container {
+  display: flex;
+  /* flex-direction: column; to responsive */
+  justify-content: space-around;
+  align-items: center;
+  gap: 5px;
+  color: black;
+
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 
@@ -209,13 +263,12 @@ input {
 
 /* DISPLAY CONTAINER AND ITEM */
 
-.container-list {
+/* .container-list {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
   gap: 10px;
-  /* background-color: pink; */
-}
+} */
 
 .list-item {
   display: flex;
@@ -237,7 +290,7 @@ input {
 }
 
 
-.container-labels {
+.labels-container {
   display: flex;
   justify-content: space-around;
   gap: 5px;
@@ -263,25 +316,25 @@ img {
   font-size: 12px;
 }
 
-.like-a-button{
+/* .like-a-button{
   background-color: #5DD140;
   border-radius: 7px;
   padding: 5px;
   margin: 10px;
-  /* width: 80%; */
-  /* display: flex;
+  width: 80%;
+  display: flex;
   justify-content: center;
   justify-self: center;
   align-self: center;
   justify-content: center;
-  align-items: center; */
+  align-items: center;
 
-}
-.like-a-button a {
+} */
+/* .like-a-button a {
   color: white;
   text-decoration: none;
 
-}
+} */
 
 
 

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 
+//FLAVOR PROFILE 
 
 function SearchRecipeItem({recipe}) {
   const openRecipePage =(url) => {
@@ -15,7 +16,7 @@ function SearchRecipeItem({recipe}) {
         </div>
         <div className="list-item-container">
         <h3>{recipe.recipe.label}</h3>
-        <div className="container-labels">
+        <div className="labels-container">
         <div className="label-item"> ⏱ {recipe.recipe.totalTime}min </div>
           <div className="label-item"> 🔥 {Math.floor(recipe.recipe.calories)} kcal</div>
           <div className="label-item"> protein: {Math.floor(recipe.recipe.totalNutrients.PROCNT.quantity)}g</div>

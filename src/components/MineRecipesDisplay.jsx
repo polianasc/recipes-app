@@ -23,9 +23,12 @@ function MineRecipesDisplay({savedRecipes, setSavedRecipes}) {
 
   {savedRecipes.map((recipe, index) => (
     <div  className="list-item" key={index}>
+      <div className="delete-btn"> 
+        <button className="delete-btn" onClick={() => handleRemove(recipe.id)}>x</button>
+      </div>
       <h3>{recipe.title}</h3>
 
-      <div className="container-labels">
+      <div className="labels-container">
         <div className="label-item"> ⏱ {recipe.cookingTime} min</div>
         <div className="label-item"> 🔥 {recipe.calories} kcal</div>
         <div className="label-item"> protein: {recipe.protein}gr</div>
@@ -40,7 +43,7 @@ function MineRecipesDisplay({savedRecipes, setSavedRecipes}) {
       </div>
 
       <button className="green-btn" onClick={()=> toggleInstructions(recipe.id)}>
-        {showInstructions[recipe.id] ? "Hide instructions" : "How to make"}  </button>
+        {showInstructions[recipe.id] ? "hide" : "how to make"}  </button>
 
         {showInstructions[recipe.id] && ( 
         <div className="ingredients-item"> {recipe.instructions}</div>
@@ -48,7 +51,7 @@ function MineRecipesDisplay({savedRecipes, setSavedRecipes}) {
       
       {/* <img src={recipe.image} alt="" /> */}
     
-      <button className="green-btn" onClick={() => handleRemove(recipe.id)}>remove</button>
+      {/* <button className="green-btn" onClick={() => handleRemove(recipe.id)}>x</button> */}
     </div>
   ))}
   </div>
